@@ -1,0 +1,6 @@
+Core,Name,NX,NY,Elapsed time(sec),Speed(GFlops)
+0, ./diffusion_seq, 8192, 8192, 6.814 , 1.970
+Core,Name,NX,NY,Elapsed time(sec),Speed(GFlops)
+28, ./diffusion_x, 8192, 8192, 4.145 , 3.238
+Core,Name,NX,NY,Elapsed time(sec),Speed(GFlops)
+28, ./diffusion_y, 8192, 8192, 0.675 , 19.898

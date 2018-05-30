@@ -1,0 +1,27 @@
+#!/bin/sh
+#$ -cwd
+#$ -l q_core=1
+#$ -l h_rt=00:10:00
+
+nt=40
+base=2
+index=13
+core=4
+
+while getopts ":c:i:" OPT
+do
+  case $OPT in
+    i) index=$OPTARG;;
+    c) core=$OPTARG;;
+    :) echo "option argument need.-c=core.-i=index"
+  esac
+done
+
+export OMP_NUM_THREADS=$core
+
+x_size=$(($base ** $index))
+y_size=$(($base ** $index))
+
+./diffusion_seq -t $nt -x $x_size -y $y_size
+./diffusion_x -t $nt -x $x_size -y $y_size
+./diffusion_y -t $nt -x $x_size -y $y_size

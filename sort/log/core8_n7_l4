@@ -1,0 +1,14 @@
+core,name,size,time(us)
+0,./sort_seq,10000000,1274155
+Data are sorted
+0,./sort_seq,10000000,1277844
+Data are sorted
+0,./sort_seq,10000000,1263445
+Data are sorted
+core,task_limit,name,size,time(us)
+8,10000, ./sort,10000000,357259
+Data are sorted
+8,10000, ./sort,10000000,357669
+Data are sorted
+8,10000, ./sort,10000000,320532
+Data are sorted
